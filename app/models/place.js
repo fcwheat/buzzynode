@@ -4,11 +4,13 @@ var mongoose = require('mongoose');
 // define the schema for a place
 var placeSchema = new mongoose.Schema({
 
+  address     : String,
   name        : String,
   longitude   : Number,
   latitude    : Number,
   score       : {type: Number, default: 0},
   last_update : Date,
+  last_updater: String
 
 });
 

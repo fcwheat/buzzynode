@@ -1,7 +1,7 @@
 // app/routes.js
 var User       = require('../app/models/user');
 var Place      = require('../app/models/place');
-var Vote      = require('../app/models/vote');
+var Vote       = require('../app/models/vote');
 
 module.exports = function(app, passport, http) 
 {
@@ -14,8 +14,13 @@ module.exports = function(app, passport, http)
       }
       else{
         var places = response;
+        var timeSince = [];
+        for (var i = 0; i < places.length; i++) {
+          timeSince.push(require('../app/timeSince')(places[i].last_update));
+        }
         res.render('index.ejs', {places: places,
-                                 total: places.length
+                                 total: places.length,
+                                 timeSince: timeSince
                                  });
       }
     });

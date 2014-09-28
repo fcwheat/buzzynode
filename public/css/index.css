@@ -67,13 +67,13 @@ body{
 
 .fa-search{
   position: relative;
-  top: 2px;
-  padding: 8px;
+  top: -2px;
+  padding: 22px;
   color: white;
   padding-top: 9px;
-  padding-bottom: 8px;
+  padding-bottom: 13px;
   background-color: #CC0000;
-  font-size: 30px;
+  font-size: 25px;
 }
 
 .results{
@@ -89,3 +89,16 @@ body{
   height:300px;
   max-width:400px;
 }
+
+.place_address, .last_update{
+  color: #919191;
+}
+
+.person_dark{
+  color: #92C3D2
+}
+
+.person_light{
+  color: #d1d1d1;
+}
+
