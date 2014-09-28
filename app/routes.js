@@ -7,7 +7,18 @@ module.exports = function(app, passport, http)
 {
   // home page
   app.get('/', function(req, res) {
-    res.render('index.ejs');
+
+    Place.find(function(err,response){
+      if (err) {
+        console.log(err);
+      }
+      else{
+        var places = response;
+        res.render('index.ejs', {places: places,
+                                 total: places.length
+                                 });
+      }
+    });
   });
 
   // fill in the basic infor

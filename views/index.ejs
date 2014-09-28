@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     <link rel="shortcut icon" href="/public/images/favicon.png">
@@ -39,29 +40,25 @@
       </div>
     </header>
     <div class="container">
-      <div class="center jumbotron">
-        <h1 id="title">
-          BUZY
-        </h1>
-        <h2>
-          The place to go when you want to know what's busy and whats buzzing on campus
-        </h2>
-        <h3>
-          BU's busyness score: 
-          <span style="color: #FF9933;">
-            41
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1 col-xs-12">
+          <span class="buzzy1" style = 'margin-bottom:4px;'>
+            <b>What's buzzing around campus?</b>
           </span>
-        </h3>
-        <a class="btn btn-large btn-primary" href="/places">Places</a> <a class="btn btn-large btn-primary" href="/vote">Vote</a>
-      </div>
-
-      <div id="outside-container">
-        <div class="footer">
-          <small>
-            Created at <a href="http://make.bu.edu">Make_BU</a> 2014
-          </small>
+          <br>
+          <input class="search" type=search results=5 placeholder=Search... name=l>
         </div>
       </div>
+
+      <!-- now put in a row for each place that was found -->
+      <% for (var i = 0; i < total; i++) {  %>
+      <div class="row">
+        <div class="col-md-3">
+          <%= places[i].name %> 
+        </div>
+      </div>
+      <% } %>
+
     </div>
   </body>
 </html>

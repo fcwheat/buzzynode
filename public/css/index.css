@@ -3,6 +3,10 @@
   font-color: white;
 }
 
+body{
+  font-family: 'Roboto', sans-serif;
+}
+
 #logo{
   float: left;
   margin-right: 10px;
@@ -33,5 +37,14 @@
 
 .footer{
   float:right;
+}
+
+.search{
+  border-radius:20px;
+  font-size:22px;
+}
+
+.buzzy1{
+  font-size:26px;
 }
 
