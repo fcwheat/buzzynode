@@ -40,4 +40,23 @@ module.exports = function(app, passport, http)
       }
     });
   });
+  //create votes
+ app.get('/create_votes', function(req, res) {
+    var vote = new Vote({
+      'place' : 'FitRec',
+      'username' : 'kanav',
+      'time_of_vote' : Date.now(),
+    });
+  // this updates the score for the respective place with value 
+  vote.updatePlace(vote.place, vote.username, 10);
+  vote.save(function(err, success) {
+      if (err) {
+        console.error(err);
+      } 
+      else{
+        console.log('success');
+        res.send(200);
+      }
+    });
+  });
 }
