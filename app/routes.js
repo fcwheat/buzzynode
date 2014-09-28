@@ -48,7 +48,7 @@ module.exports = function(app, passport, http)
       'time_of_vote' : Date.now(),
     });
   // this updates the score for the respective place with value 
-  vote.updatePlace(vote.place, vote.username, 10);
+  vote.updatePlace(vote.place, vote.username, 50);
   vote.save(function(err, success) {
       if (err) {
         console.error(err);
