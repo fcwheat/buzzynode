@@ -39,26 +39,40 @@
         </nav>
       </div>
     </header>
-    <div class="container">
+    <div class="container" style="margin-bottom:30px;">
       <div class="row">
         <div class="col-md-10 col-md-offset-1 col-xs-12">
-          <span class="buzzy1" style = 'margin-bottom:4px;'>
+          <span class="buzzy1">
             <b>What's buzzing around campus?</b>
           </span>
           <br>
-          <input class="search" type=search results=5 placeholder=Search... name=l>
+          <input class='search' style = 'margin-top:8px;' placeholder=Search...><span style="position-top:5px;"class="fa fa-search fa-3x"></span>
         </div>
       </div>
-
-      <!-- now put in a row for each place that was found -->
-      <% for (var i = 0; i < total; i++) {  %>
-      <div class="row">
-        <div class="col-md-3">
-          <%= places[i].name %> 
+    </div>
+    <div class="results">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1 col-xs-12">
+            <!-- now put in a row for each place that was found -->
+            <% for (var i = 0; i < total/2; i++) {  %>
+            <div class="row">
+              <% for (var j = 0; j < total/2 + 1; j++) {  %>
+                <div class="col-sm-5 card">
+                  <b class="place_name"><%= places[i*j + j].name %></b>
+                  <br>
+                  <div class="fa fa-male fa-5x"></div>
+                  <div class="fa fa-male fa-5x"></div>
+                  <div class="fa fa-male fa-5x"></div>
+                  <div class="fa fa-male fa-5x"></div>
+                  <div class="fa fa-male fa-5x"></div>
+                </div>
+             <% } %>
+            </div>
+            <% } %>
+          </div>
         </div>
       </div>
-      <% } %>
-
     </div>
   </body>
 </html>

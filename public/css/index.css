@@ -1,3 +1,7 @@
+html,body{
+  height:100%;
+}
+
 .header{
   background-color:#CC0000;
   font-color: white;
@@ -40,11 +44,48 @@ body{
 }
 
 .search{
-  border-radius:20px;
+  padding:6px;
   font-size:22px;
+}
+
+.search:focus{
+  outline:none;
 }
 
 .buzzy1{
   font-size:26px;
 }
 
+.place_name{
+  font-size:22px;
+  color: #505050;
+}
+
+.fa-search:hover{
+  cursor:pointer;
+}
+
+.fa-search{
+  position: relative;
+  top: 2px;
+  padding: 8px;
+  color: white;
+  padding-top: 9px;
+  padding-bottom: 8px;
+  background-color: #CC0000;
+  font-size: 30px;
+}
+
+.results{
+  background-color:#F1F1F1;
+  height:100%;
+}
+
+.card{
+  margin-top:12px;
+  padding:6px;
+  margin:12px;
+  background-color:white;
+  height:300px;
+  max-width:400px;
+}
