@@ -1,0 +1,37 @@
+.header{
+  background-color:#CC0000;
+  font-color: white;
+}
+
+#logo{
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 14px;
+  font-weight: bold;
+}
+
+#logsign{
+  color:#fff;
+  text-transform: uppercase;
+}
+
+#logsign:hover{
+  background-color:#CC0000;
+}
+
+.center{
+  text-align:center;
+}
+
+#title{
+  color:#CC0000;
+}
+
+.footer{
+  float:right;
+}
+
