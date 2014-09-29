@@ -102,3 +102,6 @@ body{
   color: #d1d1d1;
 }
 
+.person:hover{
+  cursor: pointer;
+}

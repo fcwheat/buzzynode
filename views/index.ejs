@@ -64,14 +64,14 @@
                   <b class="place_name"><%= places[i*j + j].name %></b><br>
                   <b class="place_address"><%= places[i*j + j].address %></b>
                   <br><br>
-                  <div style = "text-align:center;">
+                  <div class='people_row' style = "text-align:center;"> 
                     <!-- loop over the score -->
                     <% for (var k = 0; k < places[i*j + j].score; k++) { %>
-                      <div class="fa fa-male fa-5x person_dark person" id="<%=i*j+j%>"></div>
+                      <div class="fa fa-male fa-5x person_dark person" data-score="<%=places[i*j + j].score%>" id="<%=k%>"></div>
                     <% } %>  
                     <!-- fill in the rest of the people -->
                     <% for (var k = places[i*j + j].score; k < 5; k++) { %>
-                      <div class="fa fa-male fa-5x person_light person" id="<%=i*j+j%>"></div>
+                      <div class="fa fa-male fa-5x person_light person" data-score="<%=places[i*j + j].score%>" id="<%=k%>"></div>
                     <% } %>
                     <br>
                     <div class="last_update">last updated <%= timeSince[i*j + j] %> ago by <%= places[i*j + j].last_updater %> </div>          
