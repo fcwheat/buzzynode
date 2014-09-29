@@ -2,8 +2,6 @@
 
 var user = process.env.BuzzyDBUser;
 var password = process.env.BuzzyDBPassword;
-user = 'fwheat'
-password = 'samsamsamiam'
 var url = 'mongodb://' + user + ':' + password + '@kahana.mongohq.com:10041/BuzzyNode';
 
 exports.url = function(){
